@@ -1,4 +1,4 @@
-node-tinyci
+CCI
 ===========
 
 A very simple CI server
@@ -12,21 +12,26 @@ Feature
 * gitlab webhook
 * daily build
 
+Install
+========
 
+    npm install -g cci
 Usage
 ========
 
 ## Start server
+    cci --port 1234 --output data /path/to/config.js
 
-tinyci --port 10234 <config.js>
+Open `http://host:1234`
 
-## Run once
 
-tinyci <config.js> --project name
+## Run a task once
+
+cci <config.js> --project name
 
 ## gitlab webhook
 
-http://host:10234/gitlab/hook/{project}
+http://host:1234/gitlab/hook/{project}
 
 The project is the project name in your config file, NOT gitlab project name.
 
@@ -59,6 +64,7 @@ Output
 
 ```
 /output
+ |- index.json
  |- <project ... >
  `- <project>
      |- versions.json

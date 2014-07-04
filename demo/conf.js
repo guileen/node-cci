@@ -8,7 +8,7 @@ module.exports = {
           cmd: 'npm install'
         },
         {
-          cmd: 'mocha --harmony'
+          cmd: 'git status'
         }
       ]
     }
